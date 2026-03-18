@@ -1,80 +1,13 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title>{{title}}</title>
-</head>
-<body>
-    <h1>{{pageHeader.title}}</h1>
-    <p>{{pageHeader.strapline}}</p>
-
-    <section>
-        <h2>Welcome to Travlr Getaways</h2>
-        <p>This page is being rendered with Handlebars using MVC architecture.</p>
-    </section>
-</body>
-</html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<h1>{{pageHeader.title}}</h1>
+<p>{{pageHeader.strapline}}</p>
+
+<ul>
+    {{#each trips}}
+    <li>
+        <h3>{{name}}</h3>
+        <p>{{description}}</p>
+        <p>{{length}}</p>
+        <p>{{price}}</p>
+    </li>
+    {{/each}}
+</ul>

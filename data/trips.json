@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Hawaii",
+    "length": "7 days",
+    "price": "$1200",
+    "description": "Enjoy the beaches of Hawaii"
+  },
+  {
+    "name": "Alaska",
+    "length": "5 days",
+    "price": "$900",
+    "description": "Explore the wilderness"
+  },
+  {
+    "name": "Florida",
+    "length": "4 days",
+    "price": "$700",
+    "description": "Fun in the sun"
+  }
+]

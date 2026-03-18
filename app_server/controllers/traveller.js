@@ -1,10 +1,13 @@
+const trips = require('../../data/trips.json');
+
 const travel = (req, res) => {
     res.render('travel', {
         title: 'Travlr Getaways',
         pageHeader: {
-            title: 'Travlr Getaways',
-            strapline: 'Let us plan your next adventure'
-        }
+            title: 'Travel',
+            strapline: 'Choose your trip'
+        },
+        trips: trips
     });
 };
 
