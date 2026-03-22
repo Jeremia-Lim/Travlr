@@ -1,0 +1,22 @@
+[
+  {
+    "code": "BEACH01",
+    "name": "Bahamas Getaway",
+    "length": "7 nights / 8 days",
+    "start": "2026-06-15",
+    "resort": "Ocean Breeze Resort",
+    "perPerson": "$1299",
+    "image": "bahamas.jpg",
+    "description": "Enjoy white sand beaches and ocean views."
+  },
+  {
+    "code": "MTN02",
+    "name": "Mountain Adventure",
+    "length": "5 nights / 6 days",
+    "start": "2026-07-10",
+    "resort": "Summit Lodge",
+    "perPerson": "$999",
+    "image": "mountain.jpg",
+    "description": "Explore hiking trails and mountain views."
+  }
+]
