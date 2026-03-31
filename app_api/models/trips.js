@@ -1,40 +1,21 @@
 const mongoose = require('mongoose');
 
-const tripSchema = new mongoose.Schema({
+const tripsSchema = new mongoose.Schema({
     code: {
         type: String,
-        required: [true, 'Trip code is required'],
-        trim: true
+        required: true
     },
     name: {
         type: String,
-        required: [true, 'Trip name is required'],
-        trim: true
+        required: true
     },
-    length: {
-        type: String,
-        required: [true, 'Trip length is required']
-    },
-    start: {
-        type: String,
-        required: [true, 'Trip start date is required']
-    },
-    resort: {
-        type: String,
-        required: [true, 'Resort is required']
-    },
-    perPerson: {
-        type: String,
-        required: [true, 'Price is required']
-    },
-    image: {
-        type: String,
-        required: [true, 'Image path is required']
-    },
-    description: {
-        type: String,
-        required: [true, 'Description is required']
-    }
+    length: String,
+    start: String,
+    resort: String,
+    perPerson: Number,
+    image: String,
+    description: String
 });
 
-mongoose.model('Trip', tripSchema);
+// REGISTER the model (this is what your controller needs)
+mongoose.model('trips', tripsSchema);
