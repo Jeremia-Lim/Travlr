@@ -2,10 +2,15 @@ const express = require('express');
 const router = express.Router();
 const ctrlTrips = require('../controllers/trips');
 
-// GET all trips
-router.get('/trips', ctrlTrips.tripsList);
+router
+    .route('/trips')
+    .get(ctrlTrips.tripsList)
+    .post(ctrlTrips.tripsAddTrip);
 
-// GET single trip by ID
-router.get('/trips/:tripId', ctrlTrips.tripsFindById);
+router
+    .route('/trips/:tripCode')
+    .get(ctrlTrips.tripsFindCode)
+    .put(ctrlTrips.tripsUpdateTrip)
+    .delete(ctrlTrips.tripsDeleteTrip);
 
 module.exports = router;
