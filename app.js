@@ -4,6 +4,7 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const hbs = require('hbs');
+const cors = require('cors');
 
 require('./app_api/models/db');
 
@@ -19,6 +20,7 @@ app.set('view engine', 'hbs');
 // register partials
 hbs.registerPartials(path.join(__dirname, 'app_server', 'views', 'partials'));
 
+app.use(cors());
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -39,7 +41,7 @@ app.use(function (err, req, res, next) {
     res.locals.error = req.app.get('env') === 'development' ? err : {};
 
     res.status(err.status || 500);
-    res.send('error');
+    res.render('error');
 });
 
 module.exports = app;

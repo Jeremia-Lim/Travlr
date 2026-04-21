@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
-import { TripList } from './trip-list/trip-list';
-import { TripAdd } from './trip-add/trip-add';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [TripList, TripAdd],
+  imports: [RouterOutlet],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

@@ -16,9 +16,8 @@ mongoose.connection.on('disconnected', () => {
     console.log('Mongoose disconnected');
 });
 
-// Bring in the schema and model
 require('./trips');
-
+require('./users');
 
 process.on('SIGINT', async () => {
     await mongoose.connection.close();
